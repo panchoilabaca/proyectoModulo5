@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/bootstrap-table.css">
+  
+</head>
+
+
+<body>
+	
+	<div class="container-fluid">
+		<div th:replace="fragments/tables-manager :: tables-manager-title"></div>
+		<div th:replace="fragments/tables-manager :: tables-manager-menu"></div>
+		
+		<h2>Mantenedor de Departamentos</h2>
+		<div class="table-responsive" id="tableDivContainer"> 
+		
+		<table class="table table-condensed" id="departmentsTable" data-toggle="table">
+		  <thead>
+		    <tr>
+		      <th data-fields="dept_no">Nº Depto.</th>
+		      <th data-fields="dept_name">Nombre Depto.</th>
+		      
+		      </tr>
+		     </thead>
+		   </table>
+		   </div>
+		</div>
+		
+		<script type="text/javascript">
+	
+		document.addEventListener("DOMContentLoaded", function(event) {
+			list();
+			});
+		
+       </script>
+       <script src="/js/jquery-3.6.0.js"></script>
+	   <script src="/js/bootstrap.js"></script>
+	   <script src="/js/department.js"></script>
+	   <script src="/js/bootstrap-table.js"></script>
+	
+</body>
+</html>
